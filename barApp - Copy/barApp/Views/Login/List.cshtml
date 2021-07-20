@@ -1,0 +1,43 @@
+﻿@model IEnumerable<barApp.Models.Account>
+@*@model IEnumerable<barApp.Models.Foodorder>*@
+
+<head>
+    <link href="~/Content/loggedIn.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="wrapper" style="text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 86px;">WELCOME</h1>
+
+            @foreach (var item in Model)
+            {
+
+                <h2 style="font-size: 60px;">@Html.DisplayFor(modelItem => item.Username)</h2>
+            }
+            <form class="form">
+                <p>Great day to have a drink</p>
+
+                <br>
+
+                <button type="submit" id="login-button">Log out</button>
+
+
+            </form>
+
+            <hr />
+
+            @* MAYBE REMOVE, second database *@
+            <h2 style="display: block;">YOUR ORDERS</h2>
+            <h2 style="display: block;">HISTORY</h2>
+            <h2 style="display: block;">FAVORITES</h2>
+
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+
+
+        </div>
+</body>

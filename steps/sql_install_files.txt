@@ -1,0 +1,2 @@
+https://bit.ly/3aCEf1J.
+Unzip/uncompress the file SQL_Install_Files.zip. You will see an SQL_Install_Files folder with 2 installation files inside.

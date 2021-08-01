@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body data-spy="scroll" >
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #000000;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("DROP THE BEAT", "Index", "Home", new { area = "" }, new { @class = "navbar-brand txt--gradient-orange" })
+                @*<div id="backDrop" style="position: relative; top:20">
+                    </div>*@
+                </div>
+                <div class="navbar-collapse collapse" style="color: #d8232a;">
+                    <ul class="nav navbar-nav navigation">
+                        <li style="font-family: 'Kanit', sans-serif; ">@Html.ActionLink("HOME", "Index", "Home")</li>
+                        <li style="font-family: 'Kanit', sans-serif;">@Html.ActionLink("MENU", "About", "Home")</li>
+                        <li style="font-family: 'Kanit', sans-serif;">@Html.ActionLink("STORY", "Story", "Home")</li>
+                        <li style="font-family: 'Kanit', sans-serif;" id="contactor"><a href="#7" style="color: #d8232a;">CONTACT</a></li>
+
+
+
+                    </ul>
+                    <div class='btn-toolbar pull-right '>
+                        <div class='btn-group' style="padding-top: 8px;">
+                            <button type='button' class='btn btn-primary' style="background-color: #d8232a;"><a href="Login/Index" style="color: white;  text-decoration: none; font-family: 'Kanit', sans-serif;">LOGIN</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+
+
+    <div class="container body-content" >
+        @RenderBody()
+        <hr />
+        <footer id="7" class="page-section" style="height: 100%;">
+            <!--<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p> -->
+
+            <div class="col-sm-6 col-md-3 pb-4" style="background-color: red;">
+                <h4 class="mb-4">
+                    LOGO HERE
+                </h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-light">LOGO HERE</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light">LOGO HERE</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light">LOGO HERE</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-3 pb-4">
+                <h4 class="mb-4" style="font-family: 'Kanit';">
+                    CONTACT
+                </h4>
+                <ul class="list-unstyled" style="display: inline-block;">
+                    <li style="display: inline-block;">
+                        <a href="#" class="text-light"><i class="fa fa-whatsapp" aria-hidden="true" style="color: forestgreen; font-size: 34px;"></i></a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a href="#" class="text-light"><i class="fa fa-instagram" aria-hidden="true" style="color: #E35D6A; font-size: 34px;"></i></a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a href="#" class="text-light"> <i class="fa fa-envelope" aria-hidden="true" style="color: dodgerblue; font-size: 34px;"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 pb-4" style="font-family: 'Kanit';">
+                <h4 class="mb-4">
+                    King Albert's Park Ave 8
+                </h4>
+                <ul class="list-unstyled">
+                    <li>
+                        Hold'em Range Gallery #5-41
+                    </li>
+                    <li>
+                        Singapore 987654
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+<style>
+
+    .navbar-brand {
+        font-size: 25px;
+        font-family: 'Lobster', cursive;
+        background-image: linear-gradient(to right, #ffbf02, #ed0082);
+        color: rgba(0, 0, 0, 0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        position: relative;
+    }
+
+
+
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('a[href*=#]').bind('click', function (e) {
+            e.preventDefault(); // prevent hard jump, the default behavior
+
+            var target = $(this).attr("href"); // Set the target as variable
+
+            // perform animated scrolling by getting top-position of target-element and set it as scroll target
+            $('html, body').stop().animate({
+                scrollTop: $(target).offset().top
+            }, 600, function () {
+                location.hash = target; //attach the hash (#jumptarget) to the pageurl
+            });
+
+            return false;
+        });
+    });
+
+    $(window).scroll(function () {
+        var scrollDistance = $(window).scrollTop();
+
+        // Show/hide menu on scroll
+        //if (scrollDistance >= 850) {
+        //		$('nav').fadeIn("fast");
+        //} else {
+        //		$('nav').fadeOut("fast");
+        //}
+
+        // Assign active class to nav links while scolling
+        $('.page-section').each(function (i) {
+            if ($(this).position().top <= scrollDistance) {
+                $('.navigation a.active').removeClass('active');
+                $('.navigation a').eq(i).addClass('active');
+            }
+        });
+    }).scroll();
+</script>
+
+</html>

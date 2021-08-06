@@ -1,0 +1,15 @@
+﻿@media only screen and (min-width: 600px) {
+    .card-take {
+        width: 500px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-device-width: 800px) and (orientation: portrait) {
+    .card-take {
+        margin: 12px 10px;
+    }
+}

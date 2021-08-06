@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Delivery";
+}
+<body>
+<h2 style="color: #d8232a;">Delivery</h2>
+@* id="id01" class="modal" *@
+<div id="id02" class="model">
+
+    <head>
+        <link href="~/Content/delivery.css" rel="stylesheet" />
+    </head>
+    <body style="background: linear-gradient(to bottom, #23272B, #171A20);">
+
+        <form class="modal-content" action="/action_page.php">
+
+            <div class="container" style="color: #818489; background-color: #000000; box-shadow: 20px 15px 50px 0px #0B0D10;
+        font-family: 'Courier Prime', monospace;
+        text-shadow: -1px -1px 2px #474b4f;">
+
+                <h1 style="position: relative; left: 16px;">Address</h1>
+                <hr style="margin-left: 20px; margin-right: 20px;">
+                <label for="email" style="position: relative; left: 16px;"><b>Road</b></label>
+                <input type="text" placeholder="Enter road" name="address" required style="position: relative; left: 16px;">
+
+                <label for="psw" style="position: relative; left: 16px;"><b>Block</b></label>
+                <input type="password" placeholder="Enter block" name="psw" required style="position: relative; left: 16px;">
+                <br />
+                <label for="psw-repeat" style="position: relative; left: 16px;"><b>Remarks</b></label>
+                <input type="password" placeholder="Remarks" name="psw-repeat" required style="position: relative; left: 16px;">
+
+ 
+
+
+                <div class="clearfix" style="margin-left: 20px; margin-right: 20px;">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn"><a href="Confirmed">Go</a></button>
+                </div>
+            </div>
+        </form>
+</div>
+</body>

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<barApp.Models.Account>
+@*@model IEnumerable<barApp.Models.Foodorder>*@
+
+<head>
+    <link href="~/Content/loggedIn.css" rel="stylesheet" />
+    <link href="~/Content/reward.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="wrapper" style="text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 86px;">WELCOME</h1>
+            @{
+                List<string> arr = new List<string>();
+                int count = 0;
+                foreach (var item in Model)
+                {
+                    arr.Add(item.Username);
+                    count++;
+
+                }
+                <h2 style="font-size: 60px; text-transform: capitalize;">@arr[count - 1]</h2>
+            }
+            <form class="form">
+                <p>Great day to have a drink</p>
+                <br>
+                <button type="submit" id="login-button">Log out</button>
+
+            </form>
+            <hr />
+            @* MAYBE REMOVE, second database *@
+            @*<h2 style="display: block;">YOUR ORDERS</h2>
+        <h2 style="display: block;">HISTORY</h2>
+        <h2 style="display: block;" id="reward"><a href="Reward" style="color: black; text-decoration: none;">REWARDS</a></h2>*@
+            <div style="width: 100px; height: 100px; background: red; border-radius: 50%; position: relative; left: 515px; margin-top: 22px;"></div>
+            <header>
+                Rewards earned: 94 points
+                <!--     <span>Trace your order.</span> -->
+            </header>
+            <div class="in-container">
+                <!--    img here    -->
+                <!--  x1 field -->
+                <div class="row">
+                    <div class="col2">
+                        <input type="text" name="city" placeholder="Name">
+                        <span style="color: rebeccapurple; padding-left: 25px;">Change</span>
+                    </div>
+                </div>
+                <!--  x1 field -->
+                <!--  x1 field -->
+                <div class="row">
+                    <div class="col2">
+                        <input type="text" name="city" placeholder="Phone Number">
+                        <span style="color: rebeccapurple; padding-left: 25px;">Change</span>
+                    </div>
+                </div>
+                <!--  x1 field -->
+                <!--  x1 field -->
+                <div class="row">
+                    <div class="col2">
+                        <input type="text" name="city" placeholder="Email Address">
+                        <span style="color: rebeccapurple; padding-left: 25px;">Change</span>
+                    </div>
+                </div>
+                <!--  x1 field -->
+                <!--  x1 field -->
+                <div class="row">
+                    <div class="col2">
+                        <input type="text" name="city" placeholder="Delivery address">
+                        <span style="color: rebeccapurple; padding-left: 25px;">Change</span>
+                    </div>
+                </div>
+                <!--  x1 field -->
+
+
+            </div>
+        </div>
+
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+
+
+        </div>
+</body>

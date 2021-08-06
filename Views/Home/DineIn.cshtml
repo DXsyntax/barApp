@@ -1,0 +1,70 @@
+﻿@model IEnumerable<barApp.Models.Account>
+@{
+    ViewBag.Title = "Select seat";
+}
+<h2 style="color:#d8232a;"><b>Time and Date </b></h2>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+@*<div class="container" style="height: 100%;">*@
+
+<div class="item " style=" width: 52%; height: 50%; display: inline-block; text-align: left;">
+    Number of pax
+</div>
+
+<form>
+    <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value"> -</div>
+    <input type="number" id="number" value="0" / >
+    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value"> + </div>
+</form>
+
+
+<label for="start">Start date:</label>
+<br />
+<input type="date" id="start" name="trip-start"
+       value="2021-08-18"
+       min="2021-08-18" max="2022-08-18">
+
+
+<select name="time">
+
+    <option value="10:00">10.00 AM</option>
+    <option value="10:30">10.30 AM</option>
+    <option value="11:00">11.00 AM</option>
+    <option value="11:30">11.30 AM</option>
+    <option value="12:00">12.00 NN</option>
+    <option value="12:30">12.30 PM</option>
+    <option value="13:00">01.00 PM</option>
+    <option value="13:30">01.30 PM</option>
+    <option value="14:00">02.00 PM</option>
+    <option value="14:30">02.30 PM</option>
+    <option value="15:00">03.00 PM</option>
+    <option value="15:30">03.30 PM</option>
+    <option value="16:00">04.00 PM</option>
+    <option value="16:30">04.30 PM</option>
+    <option value="17:00">05.00 PM</option>
+    <option value="17:30">05.30 PM</option>
+    <option value="18:00">06.00 PM</option>
+    <option value="18:30">06.30 PM</option>
+    <option value="19:00" selected="">07.00 PM</option>
+    <option value="19:30">07.30 PM</option>
+    <option value="20:00">08.00 PM</option>
+    <option value="20:30">08.30 PM</option>
+    <option value="21:00">09.00 PM</option>
+    <option value="21:30">09.30 PM</option>
+    <option value="22:00">10.00 PM</option>
+    <option value="22:30">10.30 PM</option>
+    <option value="23:00">11.00 PM</option>
+</select>
+
+<br />
+<br />
+<br />
+<body style="background: linear-gradient(to bottom, #23272B, #171A20);">
+
+    <button class="btn-default" style="font-size: 20px; margin-bottom: 13px; background-color: #27a102;"><a href="DineInTable" style="color: white;  text-decoration: none;">Book Now</a></button>
+    @*</div>*@
+</body>
+

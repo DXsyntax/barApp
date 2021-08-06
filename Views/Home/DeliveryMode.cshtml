@@ -1,0 +1,63 @@
+﻿<head>
+    <link href="~/Content/takeaway.css" rel="stylesheet" />
+</head>
+<body style="background: linear-gradient(to bottom, #23272B, #171A20);">
+    <div class="all">
+        <div class="cards">
+            <div class="cardT shadow-1"><h1 class="card-name"><a href="DineInTable">DINE IN</a></h1></div>
+            <div class="cardT shadow-1"><h1 class="card-name"><a href="Pickup">PICK UP</a></h1></div>
+            <div class="cardT shadow-1"><h1 class="card-name"><a href="Delivery">DELIVERY</a></h1></div>
+
+        </div>
+    </div>
+    <!-- END .all -->
+</body>
+<style>
+
+
+    .cardT {
+        position: relative;
+        height: 150px;
+        /*background: #fcfcfc;*/
+        margin: 20px 221px;
+        transition: 0.4s all;
+        display: flex; /* change box to be fluid*/
+        justify-content: center; /*horizontally shift to the center*/
+        align-items: center; /*vertically shift to the center*/
+        color: #818489;
+        background: linear-gradient(149deg, #363B40 0%, #16181B 100%);
+        box-shadow: 20px 15px 50px 0px #0B0D10;
+        font-family: 'Courier Prime', monospace;
+        text-shadow: -1px -1px 2px #474b4f;
+    }
+
+
+
+    .shadow-1:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: inherit;
+        height: inherit;
+        z-index: -2;
+        box-sizing: border-box;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
+    }
+
+    .shadow-1:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: inherit;
+        height: inherit;
+        z-index: -2;
+        box-sizing: border-box;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+    }
+</style>

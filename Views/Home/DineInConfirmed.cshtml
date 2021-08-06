@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Dine";
+}
+<head>
+    @* link it to a css sheet *@
+
+</head>
+<body>
+    <div class="wrapperAlert" style=" display: flex; justify-content: center; text-align: center;">
+        <div class="contentAlert">
+            <div class="topHalf">
+                <p>
+                    <svg viewBox="0 0 512 512" width="100" title="check-circle" style="fill: #85CC28">
+                        <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
+                    </svg>
+                </p>
+                
+                <h1><b style="color:#818489">Your order is on it's way!</b></h1>
+                <span><b style="color:#818489">Estimated waiting time will be 10 minutes. </b></span>
+                <br />
+
+                <p style="color:#818489; text-align: center;">Seat Number: <b style="color: red"> Table 3</b></p>
+
+
+            </div>
+            <div class="bottomHalf">
+                <button id="alertMO" style="margin: 5px;" class="btn btn-primary"><a href="Index" style="color: white;  text-decoration: none; ">Return to homepage</a></button>
+                <button id="alertMO" style="margin: 5px;" class="btn btn-primary"><a href="Menu" style="color: white;  text-decoration: none; ">Browse Menu</a></button>
+                <br />
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });</script>
